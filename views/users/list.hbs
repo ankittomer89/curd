@@ -1,0 +1,28 @@
+<h3>Users List <a class="btn btn-secondary" href='/users'>  <i class="fa fa-plus"></i>  Creat New</a></h3>
+<table class='table table-striped'>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>{{this.rolesName}}</td>
+            <td>
+                <a href="/users/{{this._id}}">  <i class='fa fa-pencil fa-lg' aria-hidden="true"></i></a>
+                <a href='/users/delete/{{this.userId}}' onclick="return confirm('Are you sure want to Delete this.')">  <i class='fa fa-trash fa-lg' aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
