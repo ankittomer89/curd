@@ -9,7 +9,7 @@ var rolesSchema = new mongoose.Schema({
         type: String,
         required: 'id is require'
     },
-    userId:{
+    userId: {
         type: String,
         required: 'USer Id is require'
     }

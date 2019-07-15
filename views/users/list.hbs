@@ -1,4 +1,4 @@
-<h3>Users List <a class="btn btn-secondary" href='/users'>  <i class="fa fa-plus"></i>  Creat New</a></h3>
+<h3>Users List <a class="btn btn-secondary" href='/users'> <i class="fa fa-plus"></i> Creat New</a></h3>
 <table class='table table-striped'>
     <thead>
         <tr>
@@ -19,8 +19,9 @@
             <td>{{this.city}}</td>
             <td>{{this.rolesName}}</td>
             <td>
-                <a href="/users/{{this._id}}">  <i class='fa fa-pencil fa-lg' aria-hidden="true"></i></a>
-                <a href='/users/delete/{{this.userId}}' onclick="return confirm('Are you sure want to Delete this.')">  <i class='fa fa-trash fa-lg' aria-hidden="true"></i></a>
+                <a href="/users/{{this._id}}"> <i class='fa fa-pencil fa-lg' aria-hidden="true"></i></a>
+                <a href='/users/delete/{{this._id}}' onclick="return confirm('Are you sure want to Delete this.')"> <i
+                        class='fa fa-trash fa-lg' aria-hidden="true"></i></a>
             </td>
         </tr>
         {{/each}}

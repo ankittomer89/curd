@@ -1,27 +1,27 @@
 const mongoose = require('mongoose');
 
 var usersSchema = new mongoose.Schema({
-    fullName:{
+    fullName: {
         type: String,
         required: 'Full Name is Required'
     },
-    email:{
+    email: {
         type: String,
         required: 'Email is Required'
     },
-    mobile:{
+    mobile: {
         type: String,
         required: 'Mobile is Required'
     },
-    rolesId:{
+    rolesId: {
         type: String,
         required: 'Role Id is required'
     },
-    city:{
+    city: {
         type: String,
         required: 'City is Required'
     }
-    
+
 });
 
 mongoose.model('Users', usersSchema);

@@ -7,17 +7,17 @@ var hbs = require('express-hbs');
 
 var app = express();
 app.use(bodyparser.urlencoded({
-  extended:true
+  extended: true
 }));
 
 app.use(bodyparser.json());
 app.engine('hbs', hbs.express4({
   defaultLayout: __dirname + '/views/layouts/mainLayout',
-    layoutsDir: __dirname + '/views/layouts'
-  }));
-  app.set('view engine', 'hbs');
+  layoutsDir: __dirname + '/views/layouts'
+}));
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views/'));
-app.listen(3000, ()=>{
-    console.log('Express Server started at port :3000');
+app.listen(3000, () => {
+  console.log('Express Server started at port :3000');
 })
-app.use('/users',usersController);
+app.use('/users', usersController);
